@@ -1,0 +1,23 @@
+@startuml
+
+title Mod�le utilis� pour la base de donn�e pour le jeu Guess the correlation
+
+
+class Utilisateurs {
+  <b>noUser : Num�ro utilisateur
+  ..
+  pseudo : Pseudo utilisateur
+}
+
+class Parties{
+  <b>noPartie : NumeroDeLaPartie
+  ..
+  score:score de la partie
+  fk_noUser : Cl� �trang�re du num�ro utilisateur
+}
+
+
+
+Utilisateurs "1"<-left- "*" Parties : est jouer par (fk_noUser)  <
+
+@enduml
