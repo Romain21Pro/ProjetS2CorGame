@@ -1,8 +1,29 @@
-a { color: inherit;
-    text-decoration: none;}
+@font-face {
+    font-family: "MenuFont";
+    src: url(font/super-mario-bros.ttf);
+}
 
-div {margin-left: auto;
-    margin-right: auto;}
-h1 {text-align: center;}
-h2 {text-align: center;}
-h3 {text-align: center;}
+a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+#Menu {
+  text-align: center;
+}
+
+#MenuF {
+  font-family: "MenuFont";
+  font-size: 30;
+  font-weight: bold;
+}
+
+#HS{
+  color: red;
+  font-weight: bold;
+}
