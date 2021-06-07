@@ -1,0 +1,29 @@
+.image_responsive
+{
+  max-width: 100%;
+  height: auto;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#titre {
+  font-weight: bold;
+}
+
+aside
+{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+  
+}
