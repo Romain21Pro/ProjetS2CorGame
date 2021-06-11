@@ -7,8 +7,17 @@
   </head>
   <body>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php
+      include("connexion.php");
+      connectMaBase();
+    ?>
+
     <div id="Menu">
       <img src="Images\guesscor_logo.svg" alt="GuessTheCorrelation">
+      <div id="MenuF">
+        <label for="pseudo">pseudo :</label>
+        <input type="text" id="pseudo" name="pseudo">
+      </div><br>
       <div id="MenuF" class="Navigation">
         <a href="#NewGame">NOUVELLE PARTIE</a><br>
         <a href="#ResumeGame">RESUME GAME</a><br>

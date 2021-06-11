@@ -3,6 +3,11 @@
     src: url(font/super-mario-bros.ttf);
 }
 
+body {
+  background: repeat url(Images\guesscor_logo.svg);
+
+}
+
 a {
   color: inherit;
   text-decoration: none;
