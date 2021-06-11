@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    from matplotlib.pyplot import*
+
+
+    # Affichage du nuage de points de coordonnées (X,Y)
+    # Nom donné à la fenêtre contenant la figure
+    figure("Nuage de points (version 2)")
+    # Titre du graphique
+    title('Nuage de points de la fonction f définie par f(x)=100-x^2')
+    # Légende des axes
+    xlabel('axe des X')
+    ylabel('axe des Y')
+    # Min et max des axes
+    axis([0,10,0,102])
+
+    for i in range(11):
+        plot(i,100-i**2,'b.',ms=5)
+
+    savefig('NuagePoint_V1.jpg')
+
+    grid()    # Affiche une grille
+    show()    # Affiche la figure
+  </body>
+</html>
