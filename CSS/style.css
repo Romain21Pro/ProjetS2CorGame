@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Basefont";
-  src: url(font/retro.ttf);
+  src: url(../font/retro.ttf);
 }
 body{
   font-family: "Basefont";

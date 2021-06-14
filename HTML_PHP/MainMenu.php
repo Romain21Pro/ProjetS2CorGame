@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Guess the correlation</title>
-    <link rel="stylesheet" href="MainStyle.css">
+    <link rel="stylesheet" href="..\CSS\MainStyle.css">
   </head>
   <body>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
     ?>
 
     <div id="Menu">
-      <img src="Images\guesscor_logo.svg" alt="GuessTheCorrelation">
+      <img src="..\Images\guesscor_logo.svg" alt="GuessTheCorrelation">
       <div id="MenuF">
         <label for="pseudo">pseudo :</label>
         <input type="text" id="pseudo" name="pseudo">

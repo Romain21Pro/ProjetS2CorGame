@@ -1,6 +1,6 @@
 @font-face {
     font-family: "MenuFont";
-    src: url(font/super-mario-bros.ttf);
+    src: url(../font/super-mario-bros.ttf);
 }
 
 body {
