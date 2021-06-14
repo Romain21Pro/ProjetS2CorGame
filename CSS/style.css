@@ -2,15 +2,33 @@
   font-family: "Basefont";
   src: url(../font/retro.ttf);
 }
+
+.grid-container{
+  display: grid;
+  grid-template-areas:
+  'left middle right';
+  grid-template-columns: 1fr minmax(350px,900px) 1fr
+}
+
+.grid-container > div{
+  text-align: justify;
+}
+
+.gridLeft {
+  grid-area: left;
+
+}
+.gridMiddle {
+  grid-area: middle;
+}
+.gridRight {
+  grid-area: right;
+
+}
+
 body{
   font-family: "Basefont";
   text-align: justify;
-  margin-left:60px;
-  text-indent:10px;
-  margin-right:40px;
-  margin-top:40px;
-  margin-bottom:40%;
-
 }
 
 .image_responsive
@@ -19,12 +37,6 @@ body{
   height: auto;
 }
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
 
 #titre {
   font-weight: bold;

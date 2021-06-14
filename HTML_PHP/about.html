@@ -8,54 +8,62 @@
   </head>
   <body>
 
-    <header>
-    <aside>
-    <div id="titre" class="element">
-      <a href="MainMenu.html">RETOUR AU MENU</a><div></aside>
-    </header>
-    <br>
+    <div class="grid-container">
+      <div class="gridLeft"></div>
+      <div class="gridMiddle">
+        <header>
+        <aside>
+        <div id="titre" class="element">
+          <a href="MainMenu.php">RETOUR AU MENU</a><div></aside>
+        </header>
+        <br>
 
-    <div id="titre"><FONT color="red">A PROPOS DU JEU :</FONT></div>
+        <div id="titre"><FONT color="red">A PROPOS DU JEU :</FONT></div>
 
-    <p>Le but du jeu est simple : il faut essayer de deviner la corrélation entre les deux variables d'un nuage de points. Plus votre estimation est proche de la vraie corrélation, mieux c'est.</p>
-    <p>Votre estimation doit être comprise entre 0 et 1, où 0 correspond à aucune corrélation et 1 correspond à une corrélation parfaite.
-    Aucune corrélation négative n'est utilisée dans le jeu.
-    <br>
-    Voici quelques exemples :</p>
-    <tr>
-      <td><img src="..\Images\correlations_examples.png" alt="Exemples" class="image_responsive" class="center"></td>
-    </tr>
+        <p>Le but du jeu est simple : il faut essayer de deviner la corrélation entre les deux variables d'un nuage de points. Plus votre estimation est proche de la vraie corrélation, mieux c'est.</p>
+        <p>Votre estimation doit être comprise entre 0 et 1, où 0 correspond à aucune corrélation et 1 correspond à une corrélation parfaite.
+        Aucune corrélation négative n'est utilisée dans le jeu.
+        <br>
+        Voici quelques exemples :</p>
+        <tr>
+          <td><img src="..\Images\correlations_examples.png" alt="Exemples" class="image_responsive" class="center"></td>
+        </tr>
 
-    <br>
-    <p>On suppose que la corrélation est un jeu avec un but. Cela signifie que bien qu'il se veut divertissant, des données sur les suppositions sont collectées et utilisées pour analyser la façon dont nous percevons les corrélations dans les nuages ​​de points.
-    Donc plus il y a de gens qui jouent, plus de données sont générées !</p>
+        <br>
+        <p>On suppose que la corrélation est un jeu avec un but. Cela signifie que bien qu'il se veut divertissant, des données sur les suppositions sont collectées et utilisées pour analyser la façon dont nous percevons les corrélations dans les nuages ​​de points.
+        Donc plus il y a de gens qui jouent, plus de données sont générées !</p>
 
-    <br>
-
-
-    <div id="titre"><FONT color="red">RÈGLES :</FONT></div>
-
-    <p>Si vous devinez à moins de 0,05 de la vraie corrélation: +1 vie et +5 pièces.<br>
-    Si vous devinez à moins de 0,10 de la vraie corrélation: +1 pièce.<br>
-    Si vous devinez à > 0,10 de la vraie corrélation: -1 vie.</p>
-
-    <p>Vous recevrez également des pièces bonus si vous faites plusieurs bonnes suppositions d'affilées !</p>
-    <br>
-
-    <div id="titre"><FONT color="red">A PROPOS DE MOI :</FONT></div>
-
-    <p>Je suis doctorant en bioinformatique à l'université de Cambridge et à l'institut européen de bioinformatique. Ce jeu est un projet parallèle pour nourrir l'une de mes nombreuses curiosités quotidiennes.
-    <br>
-    Je suis toujours reconnaissant pour les suggestions et heureux de répondre aux questions sur le jeu ou sur la manière dont les données seront utilisées. Alors tweetez-moi à @omarwagih ou envoyez-moi un courriel.</p>
-    <br>
+        <br>
 
 
-    <div id="titre"><FONT color="red">AVERTISSEMENT D'UTILISATION ET DÉCLARATION DE CONFIDENTIALITÉ :</FONT></div>
+        <div id="titre"><FONT color="red">RÈGLES :</FONT></div>
 
-    <p>L'analyse des données résultantes repose sur de véritables suppositions humaines. S'il vous plaît, ne vous efforcez pas de deviner à plusieurs reprises et systématiquement la corrélation correcte (par exemple en utilisant des bots). Cela enlève le plaisir des autres utilisateurs en spammant le tableau de bord.
-    <br>Il est également facile d'identifier les utilisateurs qui font cela à partir des données et d'effacer leur nom du tableau de score. Cela étant dit, si vous trouvez un bug ou quelque chose qui ne fonctionne pas comme prévu, envoyez-moi un e-mail pour que je puisse le régler.<br>
-    Les informations suivantes seront automatiquement stockées à distance chaque fois que vous faites une estimation de corrélation: date et heure actuelles, adresse IP et données de corrélation. Ces données sont évaluées à des fins purement statistiques sous une forme anonyme.<br>
-    Si vous ne consentez pas à fournir de telles informations ou à fournir des données, veuillez vous abstenir de jouer.<br>
-    Pour plus d'informations sur la manière dont les données seront utilisées, n'hésitez pas à m'envoyer un e-mail.</p>
-  </body>
+        <p>Si vous devinez à moins de 0,05 de la vraie corrélation: +1 vie et +5 pièces.<br>
+        Si vous devinez à moins de 0,10 de la vraie corrélation: +1 pièce.<br>
+        Si vous devinez à > 0,10 de la vraie corrélation: -1 vie.</p>
+
+        <p>Vous recevrez également des pièces bonus si vous faites plusieurs bonnes suppositions d'affilées !</p>
+        <br>
+
+        <div id="titre"><FONT color="red">A PROPOS DE MOI :</FONT></div>
+
+        <p>Je suis doctorant en bioinformatique à l'université de Cambridge et à l'institut européen de bioinformatique. Ce jeu est un projet parallèle pour nourrir l'une de mes nombreuses curiosités quotidiennes.
+        <br>
+        Je suis toujours reconnaissant pour les suggestions et heureux de répondre aux questions sur le jeu ou sur la manière dont les données seront utilisées. Alors tweetez-moi à @omarwagih ou envoyez-moi un courriel.</p>
+        <br>
+
+
+        <div id="titre"><FONT color="red">AVERTISSEMENT D'UTILISATION ET DÉCLARATION DE CONFIDENTIALITÉ :</FONT></div>
+
+        <p>L'analyse des données résultantes repose sur de véritables suppositions humaines. S'il vous plaît, ne vous efforcez pas de deviner à plusieurs reprises et systématiquement la corrélation correcte (par exemple en utilisant des bots). Cela enlève le plaisir des autres utilisateurs en spammant le tableau de bord.
+        <br>Il est également facile d'identifier les utilisateurs qui font cela à partir des données et d'effacer leur nom du tableau de score. Cela étant dit, si vous trouvez un bug ou quelque chose qui ne fonctionne pas comme prévu, envoyez-moi un e-mail pour que je puisse le régler.<br>
+        Les informations suivantes seront automatiquement stockées à distance chaque fois que vous faites une estimation de corrélation: date et heure actuelles, adresse IP et données de corrélation. Ces données sont évaluées à des fins purement statistiques sous une forme anonyme.<br>
+        Si vous ne consentez pas à fournir de telles informations ou à fournir des données, veuillez vous abstenir de jouer.<br>
+        Pour plus d'informations sur la manière dont les données seront utilisées, n'hésitez pas à m'envoyer un e-mail.</p>
+      </body>
+      </div>
+      <div class="gridRight"></div>
+    </div>
+
+
 </html>
