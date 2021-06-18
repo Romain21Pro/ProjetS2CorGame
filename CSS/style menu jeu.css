@@ -1,0 +1,57 @@
+@font-face {
+    font-family: "MenuFont";
+    src: url(../font/super-mario-bros.ttf);
+}
+.grid-container{
+  display: grid;
+  grid-template-areas:
+  'left middle right';
+  grid-template-columns: 1fr minmax(350px,900px) 1fr
+}
+
+.grid-container > div{
+  text-align: center;
+}
+
+.gridLeft {
+  grid-area: left;
+
+}
+.gridMiddle {
+  grid-area: middle;
+
+}
+.gridRight {
+  grid-area: right;}
+
+#high_score {
+  color: red;
+  font-family: "MenuFont";
+}
+#chiffre {
+  text-indent: 90%;
+}
+
+#guess {
+  font-weight: bold;color: blue;
+  font-family: "MenuFont";
+  background-color: white;
+  border: none;;
+}
+
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td{
+  text-align: center;
+}
+
+div {
+  font-family: "MenuFont"; color: black;
+}
+#menu {font-family: "MenuFont";
+background-color: white;
+border: none;
+}
