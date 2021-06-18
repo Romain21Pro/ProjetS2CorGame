@@ -26,9 +26,39 @@
 
 }
 
+#arrow1 {
+    width: 22px;
+    height: 24px;
+    background-size: 22px 24px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-image: url(../images/arrow.svg);
+    margin-right: 3px;
+}
+
+#hoverTest:hover + #arrow1 {
+  opacity: 0;
+}
+
+#test2{
+    flex-direction: row-reverse;
+}
+
+#show {
+  display: none
+}
+#main:hover + #show {
+  display: block
+}
+
 
 body {
-  background: repeat url(..\Images\guesscor_logo.svg);
+  background: url(..\Images\guesscor_logo.svg);
+}
+
+table.center{
+  margin-left: auto;
+  margin-right: auto;
 }
 
 a {

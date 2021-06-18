@@ -22,12 +22,39 @@
             <input type="text" id="pseudo" name="pseudo">
           </div><br>
           <div id="MenuF" class="Navigation">
-            <a href="menu du jeu.html">NOUVELLE PARTIE</a><br>
-            <a href="menu du jeu.html">RESUME GAME</a><br>
-            <a href="#TwoPlayers">TWO PLAYERS</a><br>
-            <a href="#ScoreBoard">SCORE BOARD</a><br>
-            <a href="about.html">ABOUT</a><br>
-            <a href="settings.html">SETTINGS</a>
+            <table class="center">
+              <tr id="test2">
+                <td></td>
+                <td></td>
+                <td id="main">
+                  <a href="menu du jeu.html" id="hoverTest" >NOUVELLE PARTIE</a>
+                </td>
+                <td id="show">
+                   <img src="..\Images\arrow.svg" id="arrow1">
+                </td>
+
+              </tr>
+              <tr>
+                <td></td>
+                <td><a href="menu du jeu.html">RESUME GAME</a></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><a href="#TwoPlayers">TWO PLAYERS</a></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><a href="#ScoreBoard">SCORE BOARD</a></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><a href="about.html">ABOUT</a></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><a href="settings.html">SETTINGS</a></td>
+              </tr>
+            </table>
           </div>
           <h3 id="HS">HIGH SCORE</h3>
         </div>
