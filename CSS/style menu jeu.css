@@ -9,9 +9,7 @@
   grid-template-columns: 1fr minmax(350px,900px) 1fr
 }
 
-.grid-container > div{
-  text-align: center;
-}
+
 
 .gridLeft {
   grid-area: left;
@@ -42,10 +40,6 @@
 table.center {
   margin-left: auto;
   margin-right: auto;
-}
-
-td{
-  text-align: center;
 }
 
 div {
