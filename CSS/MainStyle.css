@@ -26,6 +26,10 @@
 
 }
 
+.menuItem {
+  display: inline-block;
+}
+
 #arrow1 {
     width: 22px;
     height: 24px;
@@ -34,22 +38,27 @@
     display: inline-block;
     background-image: url(../images/arrow.svg);
     margin-right: 3px;
+    float: left;
+}
+
+#arrow{
+  float: left;
+}
+
+
+
+#arrow1 {
+  display: none;
 }
 
 #hoverTest:hover + #arrow1 {
-  opacity: 0;
+  display: block;
 }
 
 #test2{
     flex-direction: row-reverse;
 }
 
-#show {
-  display: none
-}
-#main:hover + #show {
-  display: block
-}
 
 
 body {
@@ -64,12 +73,8 @@ table.center{
 a {
   color: inherit;
   text-decoration: none;
-  display: block;
 }
 
-img {
-  max-width: 100%;
-}
 
 #Menu {
   text-align: center;
@@ -79,6 +84,7 @@ img {
   font-family: "MenuFont";
   font-size: 30;
   font-weight: bold;
+
 }
 
 #HS{
