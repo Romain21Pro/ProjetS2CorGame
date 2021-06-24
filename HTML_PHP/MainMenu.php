@@ -20,41 +20,32 @@
           <div id="MenuF">
             <label for="pseudo">pseudo :</label>
             <input type="text" id="pseudo" name="pseudo">
-          </div><br>
+          </div><br><br>
           <div id="MenuF" class="Navigation">
-            <table class="center">
-              <tr id="test2">
-                <td></td>
-                <td></td>
-                <td id="main">
-                  <a href="menu du jeu.html" id="hoverTest" >NOUVELLE PARTIE</a>
-                </td>
-                <td id="show">
-                   <img src="..\Images\arrow.svg" id="arrow1">
-                </td>
-
-              </tr>
-              <tr>
-                <td></td>
-                <td><a href="menu du jeu.html">RESUME GAME</a></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td><a href="#TwoPlayers">TWO PLAYERS</a></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td><a href="#ScoreBoard">SCORE BOARD</a></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td><a href="about.html">ABOUT</a></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td><a href="settings.html">SETTINGS</a></td>
-              </tr>
-            </table>
+            <div class="menuItem">
+              <a href="menu du jeu.html" id="hoverTest" >NOUVELLE PARTIE</a>
+              <img src="..\Images\arrow.svg" id="arrow1">
+            </div><br><br>
+            <div class="menuItem">
+              <a href="menu du jeu page 2.html" id="hoverTest">RESUME GAME</a>
+              <img src="..\Images\arrow.svg" id="arrow1">
+            </div><br><br>
+            <div class="menuItem">
+              <a href="#TwoPlayers" id="hoverTest">TWO PLAYERS</a>
+              <img src="..\Images\arrow.svg" id="arrow1">
+            </div><br><br>
+            <div class="menuItem">
+              <a href="#ScoreBoard" id="hoverTest">SCORE BOARD</a>
+              <img src="..\Images\arrow.svg" id="arrow1">
+            </div><br><br>
+            <div class="menuItem">
+              <a href="about.html" id="hoverTest">ABOUT</a>
+              <img src="..\Images\arrow.svg" id="arrow1">
+            </div><br><br>
+            <div class="menuItem">
+              <a href="settings.html" id="hoverTest">SETTINGS</a>
+              <img src="..\Images\arrow.svg" id="arrow1">
+            </div><br><br>
           </div>
           <h3 id="HS">HIGH SCORE</h3>
         </div>
