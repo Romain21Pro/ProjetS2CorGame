@@ -11,7 +11,7 @@
       <div class="gridMiddle">
     <table class="center">
 <tr>
-<td><img height="50"src="..\Images\coeur.png" alt="coeur"></td>
+<td><img height="20"src="..\Images\coeur.png" alt="coeur"><img height="20"src="..\Images\coeur.png" alt="coeur"><img height="20"src="..\Images\coeur.png" alt="coeur"></td>
 <td></td>
 <td><div id="high_score">high score</div>
 </td>
@@ -20,19 +20,19 @@
     </form></td>
 </tr>
 <tr>
-  <td>  <img height="25" src="..\Images\piece.png" alt="piece"><br>
+  <td>  <img height="20" src="..\Images\piece.png" alt="piece"><br>
   </td>
   <td><div>0</div></td>
   <td> <div>0</div> </td>
   <td></td>
 </tr>
 <tr>
-  <td colspan="2"><img src="..\Images\exemple corrélation.png" alt="correlation"></td>
+  <td> <div id="valeur">0.71</div> </td>
   <td></td>
     <td></td>
 </tr>
 <tr>
-  <td colspan="2"><form  action="menu du jeu page 2.html" method="post">
+  <td colspan="2"><form  action="menu du jeu page 2.php" method="post">
     <input class="abc" type="text" name="estimation" value="0.">
     <input  id="guess"type="submit" name="guess" value="GUESS">
     </form></td>

@@ -7,11 +7,14 @@
     <link rel="stylesheet" type="text/css" href="..\CSS\style menu jeu.css"/>
   </head>
   <body>
+    <?php
+  $valeurréel = 0.75;
+   ?>
       <div class="gridLeft"></div>
       <div class="gridMiddle">
     <table class="center">
 <tr>
-<td><img height="50"src="..\Images\coeur.png" alt="coeur"></td>
+<td><img height="20"src="..\Images\coeur.png" alt="coeur"><img height="20"src="..\Images\coeur.png" alt="coeur"><img height="20"src="..\Images\coeur.png" alt="coeur"></td>
 <td></td>
 <td><div id="high_score">high score</div>
 </td>
@@ -20,7 +23,7 @@
     </form></td>
 </tr>
 <tr>
-  <td>  <img height="25" src="..\Images\piece.png" alt="piece"><br>
+  <td>  <img height="20" src="..\Images\piece.png" alt="piece"><br>
   </td>
   <td><div>0</div></td>
   <td> <div>0</div> </td>
@@ -32,14 +35,14 @@
     <td></td>
 </tr>
 <tr>
-  <td colspan="2"><form  action="menu du jeu.html" method="post">
+  <td colspan="2"><form  action="menu du jeu.php" method="post">
     <input id="guess"type="submit" name="suivant" value="NEXT"></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
   <td><div>true r</div></td>
-  <td><div>0</div></td>
+  <td><div><?php echo $valeurréel ?></div></td>
   <td></td>
 </tr>
 <tr>
@@ -60,6 +63,12 @@
 <tr>
   <td><div>mean error</div> </td>
   <td><div>_</div></td>
+  <td></td>
+</tr>
+<tr>
+  <td>  <?php if (abs($_POST['estimation']-$valeurréel)<0.05 ) {echo'<img height="20"src="..\Images\coeur.png" alt="coeur">';echo "+1";echo '<img height="20" src="..\Images\piece.png" alt="piece">';echo "+5";
+    } ?></td>
+  <td></td>
   <td></td>
 </tr>
   </table>
