@@ -56,9 +56,9 @@
   <td></td>
 </tr>
 <tr>
-  <td><div>streaks</div> </td>
-  <td><div>0</div></td>
-  <td></td>
+   <td><div>streaks</div> </td>
+   <td><div>0</div></td>
+   <td></td>
 </tr>
 <tr>
   <td><div>mean error</div> </td>
