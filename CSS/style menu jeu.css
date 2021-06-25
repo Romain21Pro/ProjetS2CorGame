@@ -37,6 +37,11 @@
   border: none;;
 }
 
+body {
+  background-image: url(../images/bg.svg);
+  background-size: cover;
+}
+
 table.center {
   margin-left: auto;
   margin-right: auto;

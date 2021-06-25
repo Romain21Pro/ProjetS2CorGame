@@ -62,7 +62,8 @@
 
 
 body {
-  background: url(..\Images\guesscor_logo.svg);
+  background-image: url(../images/bg.svg);
+  background-size: cover;
 }
 
 table.center{

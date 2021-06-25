@@ -32,6 +32,8 @@
 }
 
 body{
+  background-image: url(../images/bg.svg);
+  background-size: cover;
   font-family: "Basefont";
   text-align: justify;
 }

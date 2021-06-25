@@ -23,11 +23,11 @@
           </div><br><br>
           <div id="MenuF" class="Navigation">
             <div class="menuItem">
-              <a href="menu du jeu.html" id="hoverTest" >NOUVELLE PARTIE</a>
+              <a href="menu du jeu.php" id="hoverTest" >NOUVELLE PARTIE</a>
               <img src="..\Images\arrow.svg" id="arrow1">
             </div><br><br>
             <div class="menuItem">
-              <a href="menu du jeu page 2.html" id="hoverTest">REPRENDRE UNE PARTIE</a>
+              <a href="menu du jeu page 2.php" id="hoverTest">REPRENDRE UNE PARTIE</a>
               <img src="..\Images\arrow.svg" id="arrow1">
             </div><br><br>
             <div class="menuItem">
