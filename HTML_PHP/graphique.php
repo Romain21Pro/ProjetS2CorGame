@@ -6,7 +6,7 @@
   </head>
   <body>
     <html>
-ordinateur, fais le graphique aleatoire stp
+//Le graphique est sur R - trouver un moyen de l'inclure dans le code php
   <body>
     <div id="chart_div" style="width: 900px; height: 500px;"></div>
   </body>
