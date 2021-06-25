@@ -27,11 +27,11 @@
               <img src="..\Images\arrow.svg" id="arrow1">
             </div><br><br>
             <div class="menuItem">
-              <a href="menu du jeu page 2.html" id="hoverTest">RESUME GAME</a>
+              <a href="menu du jeu page 2.html" id="hoverTest">REPRENDRE UNE PARTIE</a>
               <img src="..\Images\arrow.svg" id="arrow1">
             </div><br><br>
             <div class="menuItem">
-              <a href="#TwoPlayers" id="hoverTest">TWO PLAYERS</a>
+              <a href="#TwoPlayers" id="hoverTest">DEUX JOUEURS</a>
               <img src="..\Images\arrow.svg" id="arrow1">
             </div><br><br>
             <div class="menuItem">
@@ -39,15 +39,15 @@
               <img src="..\Images\arrow.svg" id="arrow1">
             </div><br><br>
             <div class="menuItem">
-              <a href="about.html" id="hoverTest">ABOUT</a>
+              <a href="about.html" id="hoverTest">A PROPOS</a>
               <img src="..\Images\arrow.svg" id="arrow1">
             </div><br><br>
             <div class="menuItem">
-              <a href="settings.html" id="hoverTest">SETTINGS</a>
+              <a href="settings.html" id="hoverTest">PARAMETRES</a>
               <img src="..\Images\arrow.svg" id="arrow1">
             </div><br><br>
           </div>
-          <h3 id="HS">HIGH SCORE</h3>
+          <h3 id="HS">MEILLEUR SCORE</h3>
         </div>
       <div class="gridRight"></div>
     </div>

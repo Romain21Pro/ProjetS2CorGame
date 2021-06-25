@@ -13,7 +13,7 @@
 <tr>
 <td><img height="20"src="..\Images\coeur.png" alt="coeur"><img height="20"src="..\Images\coeur.png" alt="coeur"><img height="20"src="..\Images\coeur.png" alt="coeur"></td>
 <td></td>
-<td><div id="high_score">high score</div>
+<td><div id="high_score">record</div>
 </td>
 <td><form action="MainMenu.html" method="post">
   <input id="menu" type="button" name="main menu" value="main menu">
@@ -40,12 +40,12 @@
     <td></td>
 </tr>
 <tr>
-  <td><div>streaks</div> </td>
+  <td><div>serie</div> </td>
   <td><div>0</div></td>
   <td></td>
 </tr>
 <tr>
-  <td><div>mean error</div> </td>
+  <td><div>erreur moyenne</div> </td>
   <td><div>_</div></td>
   <td></td>
 </tr>
