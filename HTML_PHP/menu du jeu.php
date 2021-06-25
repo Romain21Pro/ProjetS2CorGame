@@ -13,11 +13,15 @@
 <tr>
 <td><img name="coeur1" height="20"src="..\Images\coeur.png" alt="coeur"><img name="coeur2" height="20"src="..\Images\coeur.png" alt="coeur"><img name="coeur3" height="20"src="..\Images\coeur.png" alt="coeur"></td>
 <td></td>
-<td><div id="high_score">high score</div>
+<td><div id="high_score">record</div>
 </td>
-<td><form action="MainMenu.html" method="post">
-  <input id="menu" type="button" name="main menu" value="main menu">
-    </form></td>
+<td>
+  <header>
+    <aside>
+    <div id="titre" class="element">
+    <a href="MainMenu.php">RETOUR AU MENU</a><div></aside>
+  </header>
+</td>
 </tr>
 <tr>
   <td>  <img height="20" src="..\Images\piece.png" alt="piece"><br>
@@ -40,12 +44,12 @@
     <td></td>
 </tr>
 <tr>
-  <td><div>streaks</div> </td>
+  <td><div>serie</div> </td>
   <td><div>0</div></td>
   <td></td>
 </tr>
 <tr>
-  <td><div>mean error</div> </td>
+  <td><div>erreur moyenne</div> </td>
   <td><div>_</div></td>
   <td></td>
 </tr>
