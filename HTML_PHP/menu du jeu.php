@@ -11,7 +11,7 @@
       <div class="gridMiddle">
     <table class="center">
 <tr>
-<td><img height="20"src="..\Images\coeur.png" alt="coeur"><img height="20"src="..\Images\coeur.png" alt="coeur"><img height="20"src="..\Images\coeur.png" alt="coeur"></td>
+<td><img name="coeur1" height="20"src="..\Images\coeur.png" alt="coeur"><img name="coeur2" height="20"src="..\Images\coeur.png" alt="coeur"><img name="coeur3" height="20"src="..\Images\coeur.png" alt="coeur"></td>
 <td></td>
 <td><div id="high_score">high score</div>
 </td>
