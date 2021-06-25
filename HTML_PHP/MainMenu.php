@@ -35,7 +35,7 @@
               <img src="..\Images\arrow.svg" id="arrow1">
             </div><br><br>
             <div class="menuItem">
-              <a href="#ScoreBoard" id="hoverTest">SCORE BOARD</a>
+              <a href="scoreboard.php" id="hoverTest">SCORE BOARD</a>
               <img src="..\Images\arrow.svg" id="arrow1">
             </div><br><br>
             <div class="menuItem">
