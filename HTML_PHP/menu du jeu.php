@@ -15,9 +15,13 @@
 <td></td>
 <td><div id="high_score">record</div>
 </td>
-<td><form action="MainMenu.html" method="post">
-  <input id="menu" type="button" name="main menu" value="main menu">
-    </form></td>
+<td>
+  <header>
+    <aside>
+    <div id="titre" class="element">
+    <a href="MainMenu.php">RETOUR AU MENU</a><div></aside>
+  </header>
+</td>
 </tr>
 <tr>
   <td>  <img height="20" src="..\Images\piece.png" alt="piece"><br>

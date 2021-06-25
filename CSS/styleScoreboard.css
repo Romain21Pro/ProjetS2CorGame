@@ -12,7 +12,7 @@
   display: grid;
   grid-template-areas:
   'left middle1 middle2 right';
-  grid-template-columns: 1.5fr minmax(200px,450px) minmax(200px,450px) 1fr
+  grid-template-columns: 1.5fr minmax(220px,450px) minmax(220px,450px) 1fr
 }
 
 .grid-container > div{

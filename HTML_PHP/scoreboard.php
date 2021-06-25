@@ -39,6 +39,7 @@
             while($row = mysqli_fetch_array($result)) {
               echo $row[1]."<br/>";
             }
+            $mysqli->close();
            ?>
         </div>
         <div class="gridRight"></div>
