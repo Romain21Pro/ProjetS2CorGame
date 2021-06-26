@@ -9,15 +9,20 @@
   <body>
     <?php
   $valeurréel = 0.75;
+  $coeur = "..\Images\coeur.png";
+  $pointcoeur = 3;
+  $pointargent = 0;
    ?>
       <div class="gridLeft"></div>
       <div class="gridMiddle">
     <table class="center">
 <tr>
-<td><img name="coeur1" height="20"src="..\Images\coeur.png" alt="coeur">
-  <img name="coeur2" height="20"src="..\Images\coeur.png" alt="coeur"><img name="coeur3" height="20"src="..\Images\coeur.png" alt="coeur">
-<?php if (abs($_POST['estimation']-$valeurréel)>0.10 ) {echo'<img height="20"src="..\Images\coeur vide.png" alt="coeur vide">';
-} ?></td>
+<td>
+<?php if (abs($_POST['estimation']-$valeurréel)>0.10) {$pointcoeur=$pointcoeur-1;
+};if (abs($_POST['estimation']-$valeurréel)<0.05 && $pointcoeur<3 ) {$pointcoeur=$pointcoeur+1;$pointargent=$pointargent+5;
+};if (abs($_POST['estimation']-$valeurréel)<=0.10 && abs($_POST['estimation']-$valeurréel)>=0.05 ) {$pointargent=$pointargent+1;
+};echo "<img src=$coeur height=20>"; echo "$pointcoeur";
+ ?></td>
 <td></td>
 <td><div id="high_score">high score</div>
 </td>
@@ -28,7 +33,7 @@
 <tr>
   <td>  <img height="20" src="..\Images\piece.png" alt="piece"><br>
   </td>
-  <td><div>0</div></td>
+  <td><div><?php echo "$pointargent"; ?></div></td>
   <td> <div>0</div> </td>
   <td></td>
 </tr>
@@ -38,7 +43,10 @@
     <td></td>
 </tr>
 <tr>
-  <td colspan="2"><form  action="menu du jeu.php" method="post">
+  <td colspan="2">
+    <form  action="menu du jeu.php" method="post">
+      <input type="text" name="coeur" value=$pointcoeur>
+      <input type="text" name="argent" value=$pointargent>
     <input id="guess"type="submit" name="suivant" value="NEXT"></td>
     <td></td>
     <td></td>
@@ -70,7 +78,9 @@
 </tr>
 <tr>
   <td>  <?php if (abs($_POST['estimation']-$valeurréel)<0.05 ) {echo'<img height="20"src="..\Images\coeur.png" alt="coeur">';echo "+1";echo '<img height="20" src="..\Images\piece.png" alt="piece">';echo "+5";
-    } ?></td>
+  } if (abs($_POST['estimation']-$valeurréel)>0.10 ) {echo'<img height="20"src="..\Images\coeur.png" alt="coeur">';echo "-1";}
+      if (abs($_POST['estimation']-$valeurréel)>=0.05 && abs($_POST['estimation']-$valeurréel)<=0.10) {echo '<img height="20" src="..\Images\piece.png" alt="piece">';echo "+1";}
+        ?></td>
   <td></td>
   <td></td>
 </tr>

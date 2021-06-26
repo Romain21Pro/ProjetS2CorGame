@@ -7,11 +7,17 @@
     <link rel="stylesheet" type="text/css" href="..\CSS\style menu jeu.css"/>
   </head>
   <body>
+    <?php
+  $valeurréel = 0.75;
+  $coeur = "..\Images\coeur.png";
+  $pointcoeur = 3;
+  $pointargent = 0;
+   ?>
       <div class="gridLeft"></div>
       <div class="gridMiddle">
     <table class="center">
 <tr>
-<td><img name="coeur1" height="20"src="..\Images\coeur.png" alt="coeur"><img name="coeur2" height="20"src="..\Images\coeur.png" alt="coeur"><img name="coeur3" height="20"src="..\Images\coeur.png" alt="coeur"></td>
+<td><?php echo "<img src=$coeur height=20>"; ?></td>
 <td></td>
 <td><div id="high_score">record</div>
 </td>
@@ -26,7 +32,7 @@
 <tr>
   <td>  <img height="20" src="..\Images\piece.png" alt="piece"><br>
   </td>
-  <td><div>0</div></td>
+  <td><div><?php echo "$pointargent"; ?></div></td>
   <td> <div>0</div> </td>
   <td></td>
 </tr>
