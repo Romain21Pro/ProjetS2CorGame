@@ -39,7 +39,7 @@
                 echo strtolower($pseudo);
               }
 
-              $mysqli->close();
+
               ?>
               <form class="" action="MainMenu.php" method="post" id="deconnectForm">
                 <input type="submit" name="deconnexion" value="Déconnection">
@@ -84,8 +84,23 @@
             </div><br><br>
           </div>
           <h3 id="HS">MEILLEUR SCORE</h3>
-          <div class="MenuF">
+          <div id="MenuF">
             <?php
+              if (isset($_POST['pseudo'])) {
+                $requete = "SELECT MAX(parties.score) FROM utilisateurs, parties WHERE parties.fk_pseudoUser = utilisateurs.pseudo AND parties.fk_pseudoUser='$pseudo'";
+                $result = $mysqli->query($requete);
+                $row = mysqli_fetch_array($result);
+                $value = $row[0];
+                if (is_null($value)) {
+                  echo 0;
+                }
+                else{
+                  echo $value;
+                }
+                $mysqli->close();
+              }else {
+                echo 0;
+              }
 
              ?>
           </div>
