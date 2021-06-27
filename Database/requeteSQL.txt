@@ -1,1 +1,1 @@
-SELECT utilisateurs.pseudo, parties.score FROM parties, utilisateurs WHERE utilisateurs.noUser = parties.fk_noUser ORDER BY `score` DESC;
+SELECT utilisateurs.pseudo, parties.score FROM parties, utilisateurs WHERE utilisateurs.pseudo = parties.fk_pseudoUser ORDER BY `score` DESC LIMIT 15;

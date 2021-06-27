@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 25 Juin 2021 à 13:40
+-- Généré le :  Ven 11 Juin 2021 à 09:24
 -- Version du serveur :  10.1.21-MariaDB
 -- Version de PHP :  5.6.30
 
@@ -29,29 +29,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `parties` (
   `noPartie` int(11) NOT NULL,
   `score` int(11) NOT NULL,
-  `fk_noUser` int(11) NOT NULL
+  `fk_pseudoUser` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Contenu de la table `parties`
---
-
-INSERT INTO `parties` (`noPartie`, `score`, `fk_noUser`) VALUES
-(1, 120, 1),
-(2, 130, 2),
-(3, 399, 3),
-(4, 882, 4),
-(5, 201, 5),
-(6, 749, 6),
-(7, 940, 7),
-(8, 707, 8),
-(9, 451, 9),
-(10, 5, 10),
-(11, 199, 11),
-(12, 392, 12),
-(13, 150, 13),
-(14, 691, 14),
-(15, 390, 15);
 
 -- --------------------------------------------------------
 
@@ -60,30 +39,8 @@ INSERT INTO `parties` (`noPartie`, `score`, `fk_noUser`) VALUES
 --
 
 CREATE TABLE `utilisateurs` (
-  `noUser` int(11) NOT NULL,
   `pseudo` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Contenu de la table `utilisateurs`
---
-
-INSERT INTO `utilisateurs` (`noUser`, `pseudo`) VALUES
-(1, 'Hamilton'),
-(2, 'Verstappen'),
-(3, 'Bottas'),
-(4, 'JeanPaul'),
-(5, 'JeanJaque'),
-(6, 'Pierre'),
-(7, 'Russel'),
-(8, 'RomainD'),
-(9, 'Cyril'),
-(10, 'RomainB'),
-(11, 'LilianC'),
-(12, 'ReihaneB'),
-(13, 'Test'),
-(14, 'Guest35'),
-(15, 'Pierre2');
 
 --
 -- Index pour les tables exportées
@@ -94,13 +51,13 @@ INSERT INTO `utilisateurs` (`noUser`, `pseudo`) VALUES
 --
 ALTER TABLE `parties`
   ADD PRIMARY KEY (`noPartie`),
-  ADD KEY `fk_noUser` (`fk_noUser`);
+  ADD KEY `fk_pseudoUser` (`fk_pseudoUser`);
 
 --
 -- Index pour la table `utilisateurs`
 --
 ALTER TABLE `utilisateurs`
-  ADD PRIMARY KEY (`noUser`);
+  ADD PRIMARY KEY (`pseudo`);
 
 --
 -- AUTO_INCREMENT pour les tables exportées
@@ -110,13 +67,11 @@ ALTER TABLE `utilisateurs`
 -- AUTO_INCREMENT pour la table `parties`
 --
 ALTER TABLE `parties`
-  MODIFY `noPartie` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `noPartie` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `utilisateurs`
 --
-ALTER TABLE `utilisateurs`
-  MODIFY `noUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
---
+
 -- Contraintes pour les tables exportées
 --
 
@@ -124,8 +79,12 @@ ALTER TABLE `utilisateurs`
 -- Contraintes pour la table `parties`
 --
 ALTER TABLE `parties`
-  ADD CONSTRAINT `parties_ibfk_1` FOREIGN KEY (`fk_noUser`) REFERENCES `utilisateurs` (`noUser`);
+  ADD CONSTRAINT `parties_ibfk_1` FOREIGN KEY (`fk_pseudoUser`) REFERENCES `utilisateurs` (`pseudo`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+INSERT INTO `utilisateurs` (`pseudo`) VALUES ('Luca'), ('Emilien'), ('Albert'), ('Georgia'), ('Brendan'), ('Heloise'), ('Emilie'), ('Esma'), ('Clarisse'), ('Audrey'), ('Samuel'), ('Allan'), ('Albin'), ('Gaetan'), ('Rodolf');
+
+INSERT INTO `parties` (`noPartie`, `score`, `fk_pseudoUser`) VALUES (NULL, '389', 'Albert'), (NULL, '146', 'Albin'), (NULL, '320', 'Allan'), (NULL, '359', 'Audrey'), (NULL, '229', 'Brendan'), (NULL, '84', 'Clarisse'), (NULL, '13', 'Emilie'), (NULL, '38', 'Emilien'), (NULL, '397', 'Esma'), (NULL, '69', 'Gaetan'), (NULL, '86', 'Georgia'), (NULL, '24', 'Heloise'), (NULL, '379', 'Luca'), (NULL, '377', 'Rodolf'), (NULL, '4', 'Samuel');

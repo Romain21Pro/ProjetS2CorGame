@@ -22,10 +22,9 @@
           include("connexion.php");
           $mysqli = connectMaBase();
           //require_once(userguessthecorrelation);
-          $requete="SELECT utilisateurs.pseudo, parties.score FROM parties, utilisateurs WHERE utilisateurs.noUser = parties.fk_noUser ORDER BY parties.score DESC";
+          $requete="SELECT utilisateurs.pseudo, parties.score FROM parties, utilisateurs WHERE utilisateurs.pseudo = parties.fk_pseudoUser ORDER BY parties.score DESC LIMIT 15";
           $result = $mysqli->query($requete);
           while($row = mysqli_fetch_array($result)) {
-          //  echo $row;
             echo $row[0]."<br/>";
           }
         ?>
@@ -34,7 +33,7 @@
         <div class="gridMiddle2">
           <h2>SCORE</h2>
           <?php
-            $requete="SELECT utilisateurs.pseudo, parties.score FROM parties, utilisateurs WHERE utilisateurs.noUser = parties.fk_noUser ORDER BY parties.score DESC";
+            $requete="SELECT utilisateurs.pseudo, parties.score FROM parties, utilisateurs WHERE utilisateurs.pseudo = parties.fk_pseudoUser ORDER BY parties.score DESC LIMIT 15";
             $result = $mysqli->query($requete);
             while($row = mysqli_fetch_array($result)) {
               echo $row[1]."<br/>";

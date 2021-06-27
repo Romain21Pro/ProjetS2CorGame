@@ -8,18 +8,54 @@
   </head>
   <body>
 
-    <?php
-      //include("connexion.php");
-      //connectMaBase();
-    ?>
+
     <div class="grid-container">
       <div class="gridLeft"></div>
       <div class="gridMiddle">
         <div id="Menu">
           <img src="..\Images\guesscor_logo.svg" alt="GuessTheCorrelation">
           <div id="MenuF">
-            <label for="pseudo">pseudo :</label>
-            <input type="text" id="pseudo" name="pseudo">
+          <?php
+           if(isset($_POST['pseudo'])){
+             ?>
+             <label for="pseudo">pseudo :</label>
+
+
+            <?php
+              $pseudo=$_POST['pseudo'];
+              include("connexion.php");
+              $mysqli = connectMaBase();
+              $requete = "SELECT COUNT(pseudo) FROM utilisateurs WHERE pseudo='$pseudo'";
+              $result = $mysqli->query($requete);
+              $row = mysqli_fetch_array($result);
+              $value = $row[0];
+              if ($value==0){
+                $requete = "INSERT INTO `utilisateurs`(`pseudo`) VALUES ('$pseudo')";
+                $result = $mysqli->query($requete);
+                //print $mysqli->error;
+                echo strtolower($pseudo);
+              }
+              else{
+                echo strtolower($pseudo);
+              }
+
+              $mysqli->close();
+              ?>
+              <form class="" action="MainMenu.php" method="post" id="deconnectForm">
+                <input type="submit" name="deconnexion" value="Déconnection">
+              </form>
+            <?php
+             }
+             else {
+            ?>
+               <form class="" action="MainMenu.php" method="post" id="connectForm">
+                 <label for="pseudo">pseudo :</label>
+                 <input type="text" id="pseudo" name="pseudo">
+                 <input type="submit" name="connexion" value="Connexion">
+               </form>
+            <?php
+             }
+            ?>
           </div><br><br>
           <div id="MenuF" class="Navigation">
             <div class="menuItem">
@@ -48,6 +84,11 @@
             </div><br><br>
           </div>
           <h3 id="HS">MEILLEUR SCORE</h3>
+          <div class="MenuF">
+            <?php
+
+             ?>
+          </div>
         </div>
       <div class="gridRight"></div>
     </div>
