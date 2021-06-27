@@ -1,12 +1,10 @@
-#args <- commandArgs(TRUE)
-#rho <- as.numeric(args[1])
-
+args <- commandArgs(TRUE)
+rho <- args[1]
 unlink("test.png")
 
 
 n     <- 50                    # length of vector
-rho   <- round(runif(1, min=-0.99, max=0.99),digits = 2)                 # desired correlation = cos(angle)
-print(rho)
+#rho   <- round(runif(1, min=-0.99, max=0.99),digits = 2)                 # desired correlation = cos(angle)
 theta <- acos(rho)             # corresponding angle
 x1    <- rnorm(n, 1, 1)        # fixed given data
 x2    <- rnorm(n, 2, 0.5)      # new random data

@@ -7,7 +7,9 @@
     <?php
       // Execute the R script within PHP code
       // Generates output as test.png image.
-      exec("test_corr.R");
+      exec('test_corr.R', $output);
+      $corr = substr($output[0], 3, 6);
+      echo $corr;
     ?>
     <img src="test.png?var1.1" alt="R Graph"/>
     </div>
