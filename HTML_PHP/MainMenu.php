@@ -6,9 +6,16 @@
     <title>Guess the correlation</title>
     <link rel="stylesheet" href="..\CSS\MainStyle.css">
   </head>
+
+  <?php
+    session_start();
+
+    if (isset($_POST['pseudo'])) {
+      $_SESSION['pseudo']=$_POST['pseudo'];
+    }
+   ?>
+
   <body>
-
-
     <div class="grid-container">
       <div class="gridLeft"></div>
       <div class="gridMiddle">
@@ -78,10 +85,13 @@
               <a href="about.html" id="hoverTest">A PROPOS</a>
               <img src="..\Images\arrow.svg" id="arrow1">
             </div><br><br>
-            <div class="menuItem">
-              <a href="settings.html" id="hoverTest">PARAMETRES</a>
-              <img src="..\Images\arrow.svg" id="arrow1">
-            </div><br><br>
+            <form class="" action="settings.php" method="post">
+              <div class="menuItem">
+                <a href="settings.php" id="hoverTest">PARAMETRES</a>
+                <img src="..\Images\arrow.svg" id="arrow1">
+              </div><br><br>
+            </form>
+
           </div>
           <h3 id="HS">MEILLEUR SCORE</h3>
           <div id="MenuF">
