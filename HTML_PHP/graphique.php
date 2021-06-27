@@ -7,9 +7,9 @@
     <?php
       // Execute the R script within PHP code
       // Generates output as test.png image.
-      exec("..\R\test_corr.R");
+      exec("test_corr.R");
     ?>
-    <img src="..\R\test.png?var1.1" alt="R Graph" />
+    <img src="test.png?var1.1" alt="R Graph"/>
     </div>
   </body>
 </html>
