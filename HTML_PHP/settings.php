@@ -36,6 +36,7 @@
                         $result = $mysqli->query($requete2);
                         //print $mysqli->error;
                         session_destroy();
+                        echo "Vos données ont été supprimées de la base";
                      ?>')
             } else {
               alert('<?php
