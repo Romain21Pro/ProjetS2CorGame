@@ -18,9 +18,23 @@
     if (!isset($_SESSION['pointcoeur'])) {
     $_SESSION['pointcoeur'] = 3;
     $_SESSION['pointargent'] = 0;
+    $_SESSION['streaks'] = 0;
   }
-  $valeurréel = 0.75;
+if ($_SESSION['pointcoeur']<=1) {
+  if(isset($_SESSION['pseudo'])){
+    include("connexion.php");
+    $mysqli = connectMaBase();
+    $points = $_SESSION['pointargent'];
+    $pseudo = $_SESSION['pseudo'];
+    $requete = "INSERT INTO `parties` (`noPartie`, `score`, `fk_pseudoUser`) VALUES (NULL, '$points', '$pseudo')";
+    $result = $mysqli->query($requete);
+
+  }
+  session_destroy();
+  // code...
+}
   $coeur = "..\Images\coeur.png";
+
 
    ?>
       <div class="gridLeft"></div>
@@ -29,10 +43,21 @@
 <tr>
 <td>
 
-<?php if (abs($_POST['estimation']-$valeurréel)>0.10) {$_SESSION['pointcoeur']=$_SESSION['pointcoeur']-1;
-};if (abs($_POST['estimation']-$valeurréel)<0.05 && $_SESSION['pointcoeur']<3 ) {$_SESSION['pointcoeur']=$_SESSION['pointcoeur']+1;$_SESSION['pointargent']=$_SESSION['pointargent']+5;
-};if (abs($_POST['estimation']-$valeurréel)<=0.10 && abs($_POST['estimation']-$valeurréel)>=0.05 ) {$_SESSION['pointargent']=$_SESSION['pointargent']+1;
-};echo "<img src=$coeur height=20>"; echo $_SESSION['pointcoeur'];
+<?php
+  if (abs($_POST['estimation']-$_SESSION['corr'])>0.10) {
+    $_SESSION['pointcoeur']=$_SESSION['pointcoeur']-1;
+  }
+  if ($_SESSION['pointcoeur']==3 && abs($_POST['estimation']-$_SESSION['corr'])<0.05) {
+    $_SESSION['pointargent']=$_SESSION['pointargent']+5;
+  }
+  if (abs($_POST['estimation']-$_SESSION['corr'])<0.05 && $_SESSION['pointcoeur']<3 ) {
+    $_SESSION['pointcoeur']=$_SESSION['pointcoeur']+1;
+    $_SESSION['pointargent']=$_SESSION['pointargent']+5;
+  }
+  if (abs($_POST['estimation']-$_SESSION['corr'])<=0.10 && abs($_POST['estimation']-$_SESSION['corr'])>=0.05 ) {
+    $_SESSION['pointargent']=$_SESSION['pointargent']+1;
+  }
+echo "<img src=$coeur height=20>"; echo $_SESSION['pointcoeur'];
  ?></td>
 <td></td>
 <td><div id="high_score">high score</div>
@@ -51,13 +76,7 @@
 <tr>
   <td colspan="2">
     <div id="r-output" id="width: 100%; padding: 25px;">
-    <?php
-      // Execute the R script within PHP code
-      // Generates output as test.png image.
-      exec('test_corr.R', $output);
-      $corr = substr($output[0], 3, 6);
-      echo $corr;
-    ?>
+
     <img src="test.png?var1.1" alt="R Graph"/>
     </div>
   </td>
@@ -74,22 +93,32 @@
 </tr>
 <tr>
   <td><div>true r</div></td>
-  <td><div><?php echo $valeurréel ?></div></td>
+  <td><div><?php echo $_SESSION['corr'] ?></div></td>
   <td></td>
 </tr>
 <tr>
   <td><div>guessed r</div></td>
-  <td>0</td>
+  <td><?php echo $_POST['estimation']?></td>
   <td></td>
 </tr>
 <tr>
   <td><div>difference</div></td>
-  <td><div>0</div></td>
+  <td><?php echo abs($_POST['estimation']-$_SESSION['corr']) ?></td>
   <td></td>
 </tr>
 <tr>
    <td><div>streaks</div> </td>
-   <td><div>0</div></td>
+   <td><div><?php if (abs($_POST['estimation']-$_SESSION['corr'])<0.05) {
+     $_SESSION['streaks'] = $_SESSION['streaks']+1;
+     echo $_SESSION['streaks'];
+   }
+     else {
+      $_SESSION['streaks'] = 0;
+      echo $_SESSION['streaks'];
+     }
+    ?>
+
+</div></td>
    <td></td>
 </tr>
 <tr>
@@ -98,9 +127,9 @@
   <td></td>
 </tr>
 <tr>
-  <td>  <?php if (abs($_POST['estimation']-$valeurréel)<0.05 ) {echo'<img height="20"src="..\Images\coeur.png" alt="coeur">';echo "+1";echo '<img height="20" src="..\Images\piece.png" alt="piece">';echo "+5";
-  } if (abs($_POST['estimation']-$valeurréel)>0.10 ) {echo'<img height="20"src="..\Images\coeur.png" alt="coeur">';echo "-1";}
-      if (abs($_POST['estimation']-$valeurréel)>=0.05 && abs($_POST['estimation']-$valeurréel)<=0.10) {echo '<img height="20" src="..\Images\piece.png" alt="piece">';echo "+1";}
+  <td>  <?php if (abs($_POST['estimation']-$_SESSION['corr'])<0.05 ) {echo'<img height="20"src="..\Images\coeur.png" alt="coeur">';echo "+1";echo '<img height="20" src="..\Images\piece.png" alt="piece">';echo "+5";
+  } if (abs($_POST['estimation']-$_SESSION['corr'])>0.10 ) {echo'<img height="20"src="..\Images\coeur.png" alt="coeur">';echo "-1";}
+      if (abs($_POST['estimation']-$_SESSION['corr'])>=0.05 && abs($_POST['estimation']-$_SESSION['corr'])<=0.10) {echo '<img height="20" src="..\Images\piece.png" alt="piece">';echo "+1";}
         ?></td>
   <td></td>
   <td></td>
