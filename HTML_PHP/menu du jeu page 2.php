@@ -66,7 +66,7 @@
 echo "<img src=$coeur height=20>"; echo $_SESSION['pointcoeur'];
  ?></td>
 <td></td>
-<td><div id="high_score">high score: </div>
+<td><div id="high_score">meilleur score: </div>
 <td><?php echo $_SESSION['HighScore']; ?></td>
 <td>
   <header>

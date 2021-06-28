@@ -40,7 +40,7 @@
       echo $_SESSION['pointargent'];
     }
 ?></td>
-<td><div id="high_score">high score: </div>
+<td><div id="high_score">meilleur score: </div>
 <td><?php echo $_SESSION['HighScore']; ?></td>
 </td>
 <td>
