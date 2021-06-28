@@ -26,9 +26,20 @@
 <tr>
 
 <td><img height="20" src="..\Images\coeur.png" alt="coeur"></td>
-<td><?php echo $_SESSION['pointcoeur']; ?></td>
+<td><?php
+  if (!isset($_SESSION['pointcoeur'])){
+    echo 0;
+  } else{
+    echo $_SESSION['pointcoeur'];
+  }
+  ?></td>
 <td><img height="20" src="..\Images\piece.png" alt="piece"></td>
-<td><?php echo $_SESSION['pointargent']; ?></td>
+<td><?php if (!isset($_SESSION['pointargent'])){
+      echo 0;
+    } else{
+      echo $_SESSION['pointargent'];
+    }
+?></td>
 <td><div id="high_score">high score: </div>
 <td><?php echo $_SESSION['HighScore']; ?></td>
 </td>

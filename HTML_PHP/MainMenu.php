@@ -65,14 +65,23 @@
             ?>
           </div><br><br>
           <div id="MenuF" class="Navigation">
-            <div class="menuItem">
-              <a href="menu du jeu.php" id="hoverTest" >NOUVELLE PARTIE</a>
-              <img src="..\Images\arrow.svg" id="arrow1">
-            </div><br><br>
-            <div class="menuItem">
-              <a href="menu du jeu page 2.php" id="hoverTest">REPRENDRE UNE PARTIE</a>
-              <img src="..\Images\arrow.svg" id="arrow1">
-            </div><br><br>
+            <?php
+              if (isset($_SESSION['pointcoeur'])) {
+            ?>
+              <div class="menuItem">
+                <a href="menu du jeu.php" id="hoverTest">REPRENDRE UNE PARTIE</a>
+                <img src="..\Images\arrow.svg" id="arrow1">
+              </div><br><br>
+             <?php
+               } else {
+                ?>
+                <div class="menuItem">
+                  <a href="menu du jeu.php" id="hoverTest" >NOUVELLE PARTIE</a>
+                  <img src="..\Images\arrow.svg" id="arrow1">
+                </div><br><br>
+            <?php
+               }
+             ?>
             <div class="menuItem">
               <a href="#TwoPlayers" id="hoverTest">DEUX JOUEURS</a>
               <img src="..\Images\arrow.svg" id="arrow1">

@@ -69,7 +69,7 @@ echo "<img src=$coeur height=20>"; echo $_SESSION['pointcoeur'];
 <tr>
   <td colspan="2">
     <form  action="menu du jeu.php" method="post">
-    <input id="guess"type="submit" name="suivant" value="NEXT">
+    <input id="guess"type="submit" name="suivant" value="RELANCER UNE PARTIE">
   </form></td>
     <td></td>
     <td></td>
