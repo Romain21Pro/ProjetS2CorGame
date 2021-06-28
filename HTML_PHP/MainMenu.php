@@ -102,9 +102,11 @@
                 $row = mysqli_fetch_array($result);
                 $value = $row[0];
                 if (is_null($value)) {
+                  $_SESSION['HighScore']=0;
                   echo 0;
                 }
                 else{
+                  $_SESSION['HighScore']=$value;
                   echo $value;
                 }
                 $mysqli->close();

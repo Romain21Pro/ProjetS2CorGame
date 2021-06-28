@@ -41,8 +41,8 @@
 echo "<img src=$coeur height=20>"; echo $_SESSION['pointcoeur'];
  ?></td>
 <td></td>
-<td><div id="high_score">high score</div>
-</td>
+<td><div id="high_score">high score: </div>
+<td><?php echo $_SESSION['HighScore']; ?></td>
 <td><header>
   <aside>
   <a href="MainMenu.php">RETOUR AU MENU</a><div></aside>
@@ -75,12 +75,12 @@ echo "<img src=$coeur height=20>"; echo $_SESSION['pointcoeur'];
     <td></td>
 </tr>
 <tr>
-  <td><div>true r</div></td>
+  <td><div>correlation reele</div></td>
   <td><div><?php echo $_SESSION['corr'] ?></div></td>
   <td></td>
 </tr>
 <tr>
-  <td><div>guessed r</div></td>
+  <td><div>valeur estimee</div></td>
   <td><?php echo $_POST['estimation']?></td>
   <td></td>
 </tr>
@@ -90,7 +90,7 @@ echo "<img src=$coeur height=20>"; echo $_SESSION['pointcoeur'];
   <td></td>
 </tr>
 <tr>
-   <td><div>streaks</div> </td>
+   <td><div>nombre de vie gagne simultane</div> </td>
    <td><div><?php if (abs($_POST['estimation']-$_SESSION['corr'])<0.05) {
      $_SESSION['streaks'] = $_SESSION['streaks']+1;
      echo $_SESSION['streaks'];
@@ -105,8 +105,8 @@ echo "<img src=$coeur height=20>"; echo $_SESSION['pointcoeur'];
    <td></td>
 </tr>
 <tr>
-  <td><div>mean error</div> </td>
-  <td><div>_</div></td>
+  <td><div>moyenne des ecarts</div> </td>
+  <td><div><?php echo $_SESSION['totalErreur']/$_SESSION['numberOfGames'] ?></div></td>
   <td></td>
 </tr>
 <tr>
@@ -132,12 +132,16 @@ echo "<img src=$coeur height=20>"; echo $_SESSION['pointcoeur'];
       unset($_SESSION['pointargent']);
       unset($_SESSION['pointcoeur']);
       unset($_SESSION['streaks']);
+      unset($_SESSION['numberOfGames']);
+      unset($_SESSION['totalErreur']);
     }
 
     if (!isset($_SESSION['pointcoeur'])) {
       $_SESSION['pointcoeur'] = 3;
       $_SESSION['pointargent'] = 0;
       $_SESSION['streaks'] = 0;
+      $_SESSION['numberOfGames']=0;
+      $_SESSION['totalErreur']=0;
   }
 
 

@@ -24,9 +24,13 @@
       <div class="gridMiddle">
     <table class="center">
 <tr>
-<td><?php echo "<img src=$coeur height=20>"; ?></td>
-<td></td>
-<td><div id="high_score">record</div>
+
+<td><img height="20" src="..\Images\coeur.png" alt="coeur"></td>
+<td><?php echo $_SESSION['pointcoeur']; ?></td>
+<td><img height="20" src="..\Images\piece.png" alt="piece"></td>
+<td><?php echo $_SESSION['pointargent']; ?></td>
+<td><div id="high_score">high score: </div>
+<td><?php echo $_SESSION['HighScore']; ?></td>
 </td>
 <td>
   <header>
@@ -48,8 +52,8 @@
           <img src="test.png?var1.1" alt="R Graph"/>
         </div><br>
   </td>
-  <td><div><?php echo "$pointargent"; ?></div></td>
-  <td> <div>0</div> </td>
+  <td><div></div></td>
+  <td> <div></div> </td>
   <td></td>
 </tr>
 <tr>
@@ -64,16 +68,6 @@
     </form></td>
     <td></td>
     <td></td>
-</tr>
-<tr>
-  <td><div>serie</div> </td>
-  <td><div>0</div></td>
-  <td></td>
-</tr>
-<tr>
-  <td><div>erreur moyenne</div> </td>
-  <td><div>_</div></td>
-  <td></td>
 </tr>
   </table>
     <div class="gridRight"></div>
