@@ -7,6 +7,12 @@
     <link rel="stylesheet" type="text/css" href="..\CSS\style menu jeu.css"/>
   </head>
   <body>
+
+    <?php
+      session_start();
+
+     ?>
+
     <?php
   $valeurréel = 0.75;
   $coeur = "..\Images\coeur.png";
@@ -30,7 +36,15 @@
 </td>
 </tr>
 <tr>
-  <td>  <img height="20" src="..\Images\piece.png" alt="piece"><br>
+  <td>  <div id="r-output" id="width: 100%; padding: 25px;">
+          <?php
+            // Execute the R script within PHP code
+            // Generates output as test.png image.
+            exec('test_corr.R', $output);
+            $corr = substr($output[0], 3, 6);
+          ?>
+          <img src="test.png?var1.1" alt="R Graph"/>
+        </div><br>
   </td>
   <td><div><?php echo "$pointargent"; ?></div></td>
   <td> <div>0</div> </td>
