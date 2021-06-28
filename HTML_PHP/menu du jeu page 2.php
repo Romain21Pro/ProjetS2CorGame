@@ -8,31 +8,35 @@
   </head>
   <?php
     session_start();
+    $_SESSION['estimation']=$_POST['estimation'];
 
     if (isset($_POST['pseudo'])) {
       $_SESSION['pseudo']=$_POST['pseudo'];
     }
    ?>
   <body>
+  </td>
     <?php
-    if (!isset($_SESSION['pointcoeur'])) {
-    $_SESSION['pointcoeur'] = 3;
-    $_SESSION['pointargent'] = 0;
-    $_SESSION['streaks'] = 0;
-  }
-if ($_SESSION['pointcoeur']<=1) {
-  if(isset($_SESSION['pseudo'])){
-    include("connexion.php");
-    $mysqli = connectMaBase();
-    $points = $_SESSION['pointargent'];
-    $pseudo = $_SESSION['pseudo'];
-    $requete = "INSERT INTO `parties` (`noPartie`, `score`, `fk_pseudoUser`) VALUES (NULL, '$points', '$pseudo')";
-    $result = $mysqli->query($requete);
+    //if ($_SESSION['pointcoeur']<=1) {
+    //  if(isset($_SESSION['pseudo'])){
+    //    include("connexion.php");
+    //    $mysqli = connectMaBase();
+    //    $points = $_SESSION['pointargent'];
+    //    $pseudo = $_SESSION['pseudo'];
+    //    $requete = "INSERT INTO `parties` (`noPartie`, `score`, `fk_pseudoUser`) VALUES (NULL, '$points', '$pseudo')";
+    //    $result = $mysqli->query($requete);
+    //  }
+    //  unset($_SESSION['pointargent']);
+    //  unset($_SESSION['pointcoeur']);
+    //  unset($_SESSION['streaks']);
+    //}
 
+    if (!isset($_SESSION['pointcoeur'])) {
+      $_SESSION['pointcoeur'] = 3;
+      $_SESSION['pointargent'] = 0;
+      $_SESSION['streaks'] = 0;
   }
-  session_destroy();
-  // code...
-}
+
   $coeur = "..\Images\coeur.png";
 
 
@@ -62,9 +66,13 @@ echo "<img src=$coeur height=20>"; echo $_SESSION['pointcoeur'];
 <td></td>
 <td><div id="high_score">high score</div>
 </td>
-<td><form action="MainMenu.html" method="post">
-  <input id="menu" type="button" name="main menu" value="main menu">
-    </form></td>
+<td>
+  <header>
+    <aside>
+    <div id="titre" class="element">
+    <a href="MainMenu.php">RETOUR AU MENU</a><div></aside>
+  </header>
+</td>
 </tr>
 <tr>
   <td>  <img height="20" src="..\Images\piece.png" alt="piece"><br>
@@ -85,8 +93,20 @@ echo "<img src=$coeur height=20>"; echo $_SESSION['pointcoeur'];
 </tr>
 <tr>
   <td colspan="2">
-    <form  action="menu du jeu.php" method="post">
-    <input id="guess"type="submit" name="suivant" value="NEXT">
+    <?php
+      if ($_SESSION['pointcoeur']<=0) {
+    ?>
+        <form  action="menu du jeu page 3.php" method="post">
+        <input id="guess"type="submit" name="suivant" value="NEXT">
+    <?php
+    } else {
+    ?>
+      <form  action="menu du jeu.php" method="post">
+      <input id="guess"type="submit" name="suivant" value="NEXT">
+    <?php
+    }
+     ?>
+
   </form></td>
     <td></td>
     <td></td>
